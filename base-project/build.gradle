@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'rudnaruk'
+    bintrayRepo = 'maven'
     bintrayName = 'project-base'
 
     publishedGroupId = 'com.github.rudnaruk'
