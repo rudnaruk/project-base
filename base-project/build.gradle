@@ -1,5 +1,28 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'rudnaruk'
+    bintrayName = 'project-base'
+
+    publishedGroupId = 'com.github.rudnaruk'
+    libraryName = 'ProjectBase'
+    artifact = 'project-base'
+
+    libraryDescription = 'ProjectBase is an Open Source Android library that allows developers to easily create applications'
+
+    siteUrl = 'https://github.com/rudnaruk/project-base'
+    gitUrl = 'https://github.com/rudnaruk/project-base.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'rudnaruk'
+    developerName = 'Piyapong F.'
+    developerEmail = 'rudnaruk@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -40,3 +63,5 @@ dependencies {
         exclude group: "com.android.support"
     }
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
