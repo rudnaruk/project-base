@@ -1,0 +1,16 @@
+android {
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "PROXY", "false"
+        }
+        debug {
+            buildConfigField "boolean", "PROXY", "false"
+        }
+    }
+}
+
+configurations {
+    debugCompile
+    releaseCompile
+}

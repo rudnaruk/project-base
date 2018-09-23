@@ -1,0 +1,18 @@
+package com.piya.winny.myapplication.nwmanager;
+
+import com.piya.winny.myapplication.base.network.DefaultHeader;
+
+import okhttp3.Request;
+
+/**
+ * Created by piyaponf on 9/25/2017 AD.
+ */
+
+public class MyDefaultHeader extends DefaultHeader {
+
+    @Override
+    public Request.Builder getGenericRequest(Request.Builder builder) {
+        return builder.addHeader("X-Client-Channel", "CCC");
+    }
+
+}
