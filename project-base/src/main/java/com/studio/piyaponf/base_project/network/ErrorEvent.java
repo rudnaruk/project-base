@@ -13,6 +13,7 @@ public class ErrorEvent {
     public ErrorEvent(String serviceName) {
         this.serviceName = serviceName;
     }
+
     public boolean isMatch(String... serviceNameArray) {
         List<String> serviceNameList = Arrays.asList(serviceNameArray);
         return serviceNameList.contains(serviceName);

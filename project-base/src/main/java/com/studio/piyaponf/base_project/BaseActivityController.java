@@ -9,6 +9,7 @@ import java.lang.ref.WeakReference;
 public abstract class BaseActivityController<CV extends BaseActivityContractorView> implements BaseActivityContractorController {
 
     private WeakReference<CV> view;
+
     @SuppressWarnings("unchecked")
     protected BaseActivityController(CV view) {
         //--set view to controller---

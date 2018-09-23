@@ -27,7 +27,7 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    api project(path: ':base-project')
+    api project(path: ':project-base')
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
     implementation("com.hwangjr.rxbus:rxbus:1.0.5") {

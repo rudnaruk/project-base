@@ -11,7 +11,7 @@ import android.view.View;
  * MCV Activity class
  */
 public abstract class BaseActivity<T extends BaseActivityContractorController> extends AppCompatActivity
-implements BaseActivityContractorView<T> {
+        implements BaseActivityContractorView<T> {
 
     // a Controller
     private T controller;
@@ -28,12 +28,14 @@ implements BaseActivityContractorView<T> {
 
     /**
      * For create and assign controller to Activity
+     *
      * @return T generics Controller class
      */
     protected abstract T createController();
 
     /**
      * for binding view to activity attributes
+     *
      * @param view
      */
     public abstract void bindView(View view);
@@ -49,17 +51,18 @@ implements BaseActivityContractorView<T> {
      */
     public abstract void initialize();
 
-    @Override
-    public void setController(T controller) {
-        this.controller = controller;
-    }
-
     /**
-     *for get Controller
+     * for get Controller
+     *
      * @return T generics Controller class
      */
     public T getController() {
         return controller;
+    }
+
+    @Override
+    public void setController(T controller) {
+        this.controller = controller;
     }
 
     @Override
