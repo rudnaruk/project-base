@@ -36,13 +36,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class BaseApiService<T> {
     protected String baseUrl;
     private T api;
-    private boolean logger;
+    private boolean logger = false;
     private long TIMEOUT = 6000;
     private DefaultHeader defaultHeader;
 
     protected abstract Class<T> getApiClassType();
 
-    public String getBaseUrl() {
+    public String getBaseUrl(){
         return baseUrl;
     }
 
@@ -50,8 +50,7 @@ public abstract class BaseApiService<T> {
         this.baseUrl = baseUrl;
     }
 
-    private boolean isLogger() {
-        logger = BuildConfig.DEBUG;
+    public boolean isLogger() {
         return logger;
     }
 
@@ -59,7 +58,6 @@ public abstract class BaseApiService<T> {
 
     /**
      * get additional header by services
-     *
      * @return Interceptor
      */
     private Interceptor getOnTopInterceptor() {
@@ -79,7 +77,6 @@ public abstract class BaseApiService<T> {
 
     /**
      * get default http client
-     *
      * @return OkHttpClient
      */
     private OkHttpClient getClient() {
@@ -99,7 +96,6 @@ public abstract class BaseApiService<T> {
 
     /**
      * get default service Timeout
-     *
      * @return timeout millisecond
      */
     protected long getDefaultTimeout() {
@@ -108,14 +104,12 @@ public abstract class BaseApiService<T> {
 
     /**
      * get default Interceptor
-     *
      * @return {@link DefaultHeader} default header
      */
     public abstract DefaultHeader getDefaultHeader();
 
     /**
      * for bypass self-signed-cert SSL
-     *
      * @param builder
      */
     private void configCertificate(OkHttpClient.Builder builder) {
@@ -166,16 +160,14 @@ public abstract class BaseApiService<T> {
 
     /**
      * get ApiService object
-     *
      * @return Api service calss
      */
-    public T getApi() {
+    public T getApi(){
         return getBaseRetrofitBuilder().build().create(getApiClassType());
     }
 
     /**
      * set ApiService object
-     *
      * @param api ApiService object
      */
     public void setApi(T api) {
@@ -184,7 +176,6 @@ public abstract class BaseApiService<T> {
 
     /**
      * for create Retrofit Builder
-     *
      * @return Retrofit Builder
      */
     private Retrofit.Builder getBaseRetrofitBuilder() {
@@ -201,7 +192,6 @@ public abstract class BaseApiService<T> {
 
     /**
      * for get Http log interceptor
-     *
      * @param showLog flag for logging
      * @return HttpLoggingInterceptor
      */
@@ -210,31 +200,6 @@ public abstract class BaseApiService<T> {
             return new HttpLoggingInterceptor(new BaseHttpLogger()).setLevel(HttpLoggingInterceptor.Level.BODY);
         } else {
             return new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE);
-        }
-    }
-
-    /**
-     * return "null" for not use Converter in retrofit.
-     */
-    protected Converter.Factory addConverter() {
-        return GsonConverterFactory.create(new GsonBuilder().setPrettyPrinting().create());
-    }
-
-    /**
-     * show large log to console
-     *
-     * @param tag     String Tag name
-     * @param content message for logging
-     */
-    public void largeLog(String tag, String content) {
-        int MAX_LOG_LENGTH = 4076;
-        int offset = 0;
-        while (offset + MAX_LOG_LENGTH <= content.length()) {
-            Log.d(tag, content.substring(offset, offset += MAX_LOG_LENGTH).replace("&quot;", "\""));
-        }
-
-        if (offset < content.length()) {
-            Log.d(tag, content.substring(offset).replace("&quot;", "\""));
         }
     }
 
@@ -259,6 +224,29 @@ public abstract class BaseApiService<T> {
                 m.printStackTrace();
                 Log.d(logName, message);
             }
+        }
+    }
+    /**
+     * return "null" for not use Converter in retrofit.
+     */
+    protected Converter.Factory addConverter() {
+        return GsonConverterFactory.create(new GsonBuilder().setPrettyPrinting().create());
+    }
+
+    /**
+     * show large log to console
+     * @param tag String Tag name
+     * @param content message for logging
+     */
+    public void largeLog(String tag, String content) {
+        int MAX_LOG_LENGTH = 4076;
+        int offset = 0;
+        while (offset + MAX_LOG_LENGTH <= content.length()) {
+            Log.d(tag, content.substring(offset, offset += MAX_LOG_LENGTH).replace("&quot;", "\""));
+        }
+
+        if (offset < content.length()) {
+            Log.d(tag, content.substring(offset).replace("&quot;", "\""));
         }
     }
 }

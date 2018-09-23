@@ -20,6 +20,11 @@ import retrofit2.Response;
 
 public class MainNwManager extends BaseApiService<MainApiService> {
 
+    @Override
+    public boolean isLogger() {
+        return false;
+    }
+
     public static String SERVICE_GET_USER = "get_user";
 
     public void getUser(String username){

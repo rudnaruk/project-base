@@ -16,6 +16,7 @@ public class MainActivity extends BaseActivity<MainActivityConstructor.Controlle
 
     }
 
+
     @Override
     protected MainActivityConstructor.Controller createController() {
         return MainActivityController.createController(this);
