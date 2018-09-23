@@ -1,9 +1,9 @@
 package com.piya.winny.myapplication.module.main;
 
 import com.hwangjr.rxbus.RxBus;
-import com.piya.winny.myapplication.base.network.BaseApiService;
-import com.piya.winny.myapplication.base.network.DefaultHeader;
-import com.piya.winny.myapplication.base.network.ErrorEvent;
+import com.studio.piyaponf.base_project.network.BaseApiService;
+import com.studio.piyaponf.base_project.network.DefaultHeader;
+import com.studio.piyaponf.base_project.network.ErrorEvent;
 import com.piya.winny.myapplication.module.main.model.User;
 import com.piya.winny.myapplication.module.main.service.MainApiService;
 import com.piya.winny.myapplication.nwmanager.MyDefaultHeader;

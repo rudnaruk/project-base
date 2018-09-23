@@ -1,6 +1,6 @@
 package com.piya.winny.myapplication.nwmanager;
 
-import com.piya.winny.myapplication.base.network.DefaultHeader;
+import com.studio.piyaponf.base_project.network.DefaultHeader;
 
 import okhttp3.Request;
 

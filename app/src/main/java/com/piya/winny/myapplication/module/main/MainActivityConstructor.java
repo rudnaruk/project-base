@@ -1,7 +1,7 @@
 package com.piya.winny.myapplication.module.main;
 
-import com.piya.winny.myapplication.base.BaseActivityContractorController;
-import com.piya.winny.myapplication.base.BaseActivityContractorView;
+import com.studio.piyaponf.base_project.BaseActivityContractorController;
+import com.studio.piyaponf.base_project.BaseActivityContractorView;
 
 /**
  * Created by piyaponf on 9/21/2017 AD.

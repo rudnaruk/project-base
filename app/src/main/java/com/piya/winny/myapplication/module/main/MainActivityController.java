@@ -4,10 +4,10 @@ import android.util.Log;
 
 import com.hwangjr.rxbus.RxBus;
 import com.hwangjr.rxbus.annotation.Subscribe;
-import com.piya.winny.myapplication.base.BaseActivityContractorView;
-import com.piya.winny.myapplication.base.BaseActivityController;
-import com.piya.winny.myapplication.base.network.ErrorEvent;
 import com.piya.winny.myapplication.module.main.model.User;
+import com.studio.piyaponf.base_project.BaseActivityContractorView;
+import com.studio.piyaponf.base_project.BaseActivityController;
+import com.studio.piyaponf.base_project.network.ErrorEvent;
 
 /**
  * Created by piyaponf on 9/21/2017 AD.

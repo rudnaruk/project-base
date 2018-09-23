@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.piya.winny.myapplication.R;
-import com.piya.winny.myapplication.base.BaseActivity;
+import com.studio.piyaponf.base_project.BaseActivity;
 
 public class MainActivity extends BaseActivity<MainActivityConstructor.Controller> implements MainActivityConstructor.View {
 

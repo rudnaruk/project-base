@@ -1,11 +1,11 @@
-package com.piya.winny.myapplication.base.network;
+package com.studio.piyaponf.base_project.network;
 
 import android.util.Log;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-import com.piya.winny.myapplication.BuildConfig;
+import com.studio.piyaponf.base_project.BuildConfig;
 
 import java.io.IOException;
 import java.security.KeyManagementException;
