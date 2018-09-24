@@ -27,6 +27,7 @@ api('com.github.rudnaruk:project-base:0.0.2@aar'){
 }
 ```
 Project Gradle
+add to the end of file
 ```gradle
 ext {
     compileSdkVersion = 27
