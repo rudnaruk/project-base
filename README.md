@@ -1,5 +1,4 @@
 # project-base
-======
 
 ProjectBase is an Open Source Android library that allows developers to easily create applications.
 
@@ -49,4 +48,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Follow [facebook.com/rudnaruk](https://www.facebook.com/rudnaruk) on Facebook page.
 or [@rudnaruk](https://medium.com/@ssaraleaw) at my Medium blog. :)
 
-For contact, shoot me an email at .thekhaeng@gmail.com
+For contact, shoot me an email at rudnaruk@gmail.com
