@@ -10,7 +10,7 @@ ProjectBase is an Open Source Android library that allows developers to easily c
 
 ## Installation
 
-Maven
+#### Maven
 ```xml
 <dependency>
   <groupId>com.github.rudnaruk</groupId>
@@ -20,13 +20,14 @@ Maven
 </dependency>
 ```
 
-App Gradle
+#### Gradle
+Add to App build.gradle
 ```gradle
 api('com.github.rudnaruk:project-base:0.0.2@aar'){
     exclude group: 'com.android.support', module: 'appcompat-v7'
 }
 ```
-Project Gradle
+Project build.gradle 
 add to the end of file
 ```gradle
 ext {
