@@ -23,16 +23,18 @@ ProjectBase is an Open Source Android library that allows developers to easily c
 #### Gradle
 Add to App build.gradle
 ```gradle
-api('com.github.rudnaruk:project-base:0.0.2@aar'){
-    exclude group: 'com.android.support', module: 'appcompat-v7'
-}
+api 'com.github.rudnaruk:project-base:0.0.3@aar'
 ```
 Project build.gradle 
 add to the end of file
 ```gradle
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    ...
+}
 ext {
-    compileSdkVersion = 27
-    supportLibVersion = "27.1.1"
+    compileSdkVersion = 29
+    targetSdkVersion = 26
 }
 ```
 
