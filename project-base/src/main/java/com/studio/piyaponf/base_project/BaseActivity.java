@@ -2,9 +2,10 @@ package com.studio.piyaponf.base_project;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by piyaponf on 9/21/2017 AD.
