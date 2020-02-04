@@ -4,8 +4,8 @@ ProjectBase is an Open Source Android library that allows developers to easily c
 
 ## Version
 
-**version 0.0.2**
-
+**version 0.0.3**
+- Support AndroidX
 - update isLogger
 
 ## Installation
@@ -15,7 +15,7 @@ ProjectBase is an Open Source Android library that allows developers to easily c
 <dependency>
   <groupId>com.github.rudnaruk</groupId>
   <artifactId>project-base</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <type>pom</type>
 </dependency>
 ```
