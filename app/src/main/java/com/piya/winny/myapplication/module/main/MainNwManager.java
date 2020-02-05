@@ -22,7 +22,7 @@ public class MainNwManager extends BaseApiService<MainApiService> {
 
     @Override
     public boolean isLogger() {
-        return false;
+        return true;
     }
 
     public static String SERVICE_GET_USER = "get_user";

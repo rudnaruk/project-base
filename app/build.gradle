@@ -33,9 +33,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
     api project(path: ':project-base')
-    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
-    implementation("com.hwangjr.rxbus:rxbus:1.0.5") {
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation("com.hwangjr.rxbus:rxbus:2.0.1") {
         exclude group: "com.jakewharton.timber", module: "timber"
         exclude group: "com.android.support"
     }
