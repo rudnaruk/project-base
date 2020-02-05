@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -35,6 +39,7 @@ dependencies {
     api project(path: ':project-base')
     implementation 'com.squareup.okhttp3:okhttp:4.3.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.1'
     implementation("com.hwangjr.rxbus:rxbus:2.0.1") {
         exclude group: "com.jakewharton.timber", module: "timber"
         exclude group: "com.android.support"

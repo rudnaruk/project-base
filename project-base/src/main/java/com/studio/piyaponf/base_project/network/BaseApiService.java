@@ -27,6 +27,7 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -182,11 +183,13 @@ public abstract class BaseApiService<T> {
         if (addConverter() == null) {
             return new Retrofit.Builder()
                     .baseUrl(getBaseUrl())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .client(getClient());
         }
         return new Retrofit.Builder()
                 .baseUrl(getBaseUrl())
                 .addConverterFactory(addConverter())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(getClient());
     }
 
